@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.thefilmsvault</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>pet-clinic</name>
     <description>Demo project for a pet clinic using Spring Boot</description>
 
@@ -42,7 +42,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:AlejandroFloresArroyo/Pet-Clinic-Spring.git</developerConnection>
-      <tag>pet-clinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
