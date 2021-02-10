@@ -1,10 +1,9 @@
 package com.thefilmsvault.petclinic.model;
 
 public class Person {
+
     private String fisrtName;
     private String lastName;
-
-
 
     public String getFisrtName() {
         return fisrtName;
@@ -21,4 +20,5 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
 }
