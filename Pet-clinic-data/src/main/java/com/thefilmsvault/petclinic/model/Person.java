@@ -1,16 +1,16 @@
 package com.thefilmsvault.petclinic.model;
 
-public class Person {
+public class Person extends BaseEntity {
 
-    private String fisrtName;
+    private String firstName;
     private String lastName;
 
-    public String getFisrtName() {
-        return fisrtName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFisrtName(String fisrtName) {
-        this.fisrtName = fisrtName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
