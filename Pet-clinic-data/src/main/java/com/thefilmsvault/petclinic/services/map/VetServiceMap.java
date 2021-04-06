@@ -2,10 +2,11 @@ package com.thefilmsvault.petclinic.services.map;
 
 import com.thefilmsvault.petclinic.model.Vet;
 import com.thefilmsvault.petclinic.services.CrudService;
+import com.thefilmsvault.petclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
