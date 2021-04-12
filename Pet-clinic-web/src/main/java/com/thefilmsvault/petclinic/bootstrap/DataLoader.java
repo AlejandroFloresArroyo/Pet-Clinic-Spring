@@ -4,8 +4,6 @@ import com.thefilmsvault.petclinic.model.Owner;
 import com.thefilmsvault.petclinic.model.Vet;
 import com.thefilmsvault.petclinic.services.OwnerService;
 import com.thefilmsvault.petclinic.services.VetService;
-import com.thefilmsvault.petclinic.services.map.OwnerServiceMap;
-import com.thefilmsvault.petclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.ownerService = new OwnerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -30,9 +28,9 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner1.setId(2L);
-        owner1.setFirstName("Alejandro");
-        owner1.setLastName("Rojas");
+        owner2.setId(2L);
+        owner2.setFirstName("Alejandro");
+        owner2.setLastName("Rojas");
 
         ownerService.save(owner2);
 
@@ -46,9 +44,9 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
-        vet1.setId(2L);
-        vet1.setFirstName("Qwerty");
-        vet1.setLastName("Acapulca");
+        vet2.setId(2L);
+        vet2.setFirstName("Qwerty");
+        vet2.setLastName("Acapulca");
 
         vetService.save(vet2);
         System.out.println("Loaded Vets........");

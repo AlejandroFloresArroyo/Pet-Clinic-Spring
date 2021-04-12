@@ -2,9 +2,11 @@ package com.thefilmsvault.petclinic.services.map;
 
 import com.thefilmsvault.petclinic.model.Pet;
 import com.thefilmsvault.petclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
     @Override
